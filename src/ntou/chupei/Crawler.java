@@ -43,9 +43,14 @@ public class Crawler
 			homePage = client.getPage(rootURL);
 			
 			if(login(account,passwd))
+			{
 				Console.log("Login Success!!");
+				updateCourse();
+			}
 			else
+			{
 				Console.err("Login Fail!!");
+			}
 		} 
 		catch (FailingHttpStatusCodeException e) 
 		{
@@ -112,7 +117,9 @@ public class Crawler
 	
 	public void updateCourse()
 	{
-		ArrayList list = (ArrayList) homePage.getByXPath("//*[@id=\"inst3\"]/div[2]/div");
+		ArrayList list = (ArrayList) homePage.getByXPath("//div[contains(@id,\"objTreeMenu_1_node\")]");
+		
+		Console.log("Test");
 	}
 	
 	public boolean isLogin()
