@@ -9,6 +9,6 @@ public class Course
 	
 	public Course()
 	{
-		;
+		System.out.println("Say HI!");
 	}
 }
