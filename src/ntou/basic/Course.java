@@ -10,6 +10,6 @@ public class Course
 	public Course()
 	{
 		//Add Comment;
-		;
+		System.out.println("Course Initial");
 	}
 }
